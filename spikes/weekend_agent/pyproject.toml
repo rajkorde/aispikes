@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "weekend-agent"
+version = "0.1.0"
+description = ""
+authors = ["Rajesh Korde <rajesh.korde@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langgraph = "^0.2.64"
+langchain-community = "^0.3.14"
+langchain-openai = "^0.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
