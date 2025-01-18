@@ -10,7 +10,11 @@ python = "^3.12"
 langgraph = "^0.2.64"
 langchain-community = "^0.3.14"
 langchain-openai = "^0.3.0"
+python-dotenv = "^1.0.1"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]
