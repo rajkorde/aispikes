@@ -25,10 +25,12 @@ def show_graph(graph: CompiledStateGraph):
 
 
 def stream_graph_updates(user_input: str):
-    for event in graph.stream({"messages": [{"role": "user", "context": user_input}]}):
+    for event in graph.stream({"messages": [{"role": "user", "content": user_input}]}):
         for value in event.values():
             print("Assistant: ", value["messages"][-1].content)
 
+
+# Basic chatbot
 
 builder = StateGraph(State)
 
@@ -41,6 +43,8 @@ builder.add_edge(START, "chatbot")
 builder.add_edge("chatbot", END)
 
 graph = builder.compile()
+
+show_graph(graph)
 
 while True:
     try:
