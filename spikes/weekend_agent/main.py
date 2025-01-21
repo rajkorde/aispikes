@@ -1,20 +1,56 @@
+import datetime
+from typing import Optional
+
 from dotenv import load_dotenv
 from IPython.display import Image, display
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from langgraph.graph import START, MessagesState, StateGraph  # type: ignore
 from langgraph.prebuilt import ToolNode, tools_condition  # type: ignore
+from pydantic import BaseModel, Field
 
-from weekend_agent.tools import add, divide, multiply
+from weekend_agent.tools import scrape_webpage
 
 assert load_dotenv()
 
+url = "https://www.events12.com/seattle/"
+
+doc = scrape_webpage(url)
+
+extract_instructions = """
+You will be given a context that has text extracted from a website that contains a list of events and your job is to extract events from the list in a specific format. 
+
+Context: {context}
+
+"""
+
+
+class Event(BaseModel):
+    name: str = Field(description="Name of the Event")
+    description: Optional[str] = Field(description="Brief description of the Event")
+    date: str = Field(description="Date of the event")
+
+
+class Events(BaseModel):
+    events: list[Event] = Field(default_factory=list, description="List of events")
+
+
 llm = ChatOpenAI(model="gpt-4o-mini")
-tools = [add, multiply, divide]
+llm_with_structured_output = llm.with_structured_output(Events)
+
+response = llm_with_structured_output.invoke(
+    [SystemMessage(content=extract_instructions.format(context=doc.page_content))]
+)
+
+print(response.events)
+
+llm = ChatOpenAI(model="gpt-4o-mini")
+tools = [scrape_webpage]
 llm_with_tools = llm.bind_tools(tools, parallel_tool_calls=False)
 
+
 sys_msg = SystemMessage(
-    content="You are a helpful assistant tasked with performing arithmetic on a set of inputs."
+    content="You are a helpful assistant tasked with coming up with interesting things to do in Seattle"
 )
 
 
