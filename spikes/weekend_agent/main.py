@@ -1,52 +1,29 @@
-import datetime
-from typing import Optional
-
 from dotenv import load_dotenv
 from IPython.display import Image, display
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from langgraph.graph import START, MessagesState, StateGraph  # type: ignore
-from langgraph.prebuilt import ToolNode, tools_condition  # type: ignore
-from pydantic import BaseModel, Field
+from langgraph.prebuilt import tools_condition  # type: ignore
 
-from weekend_agent.tools import scrape_webpage
+from weekend_agent.date_extracter import DateExtracter
+from weekend_agent.events import EventExtracter
+from weekend_agent.scraper import scrape_webpage
 
 assert load_dotenv()
 
 url = "https://www.events12.com/seattle/"
 
 doc = scrape_webpage(url)
+assert doc and len(doc) > 0
 
-extract_instructions = """
-You will be given a context that has text extracted from a website that contains a list of events and your job is to extract events from the list in a specific format. 
+events = EventExtracter().extract_events(doc)
+assert events
 
-Context: {context}
-
-"""
-
-
-class Event(BaseModel):
-    name: str = Field(description="Name of the Event")
-    description: Optional[str] = Field(description="Brief description of the Event")
-    date: str = Field(description="Date of the event")
-
-
-class Events(BaseModel):
-    events: list[Event] = Field(default_factory=list, description="List of events")
+date_extracter = DateExtracter()
+date_extracter.get_date_range(events[10].date)
 
 
 llm = ChatOpenAI(model="gpt-4o-mini")
-llm_with_structured_output = llm.with_structured_output(Events)
-
-response = llm_with_structured_output.invoke(
-    [SystemMessage(content=extract_instructions.format(context=doc.page_content))]
-)
-
-print(response.events)
-
-llm = ChatOpenAI(model="gpt-4o-mini")
-tools = [scrape_webpage]
-llm_with_tools = llm.bind_tools(tools, parallel_tool_calls=False)
 
 
 sys_msg = SystemMessage(
@@ -55,12 +32,12 @@ sys_msg = SystemMessage(
 
 
 def asssistant(state: MessagesState):
-    return {"Messages": [llm_with_tools.invoke([sys_msg] + state["messages"])]}
+    return {"Messages": [llm.invoke([sys_msg] + state["messages"])]}
 
 
 builder = StateGraph(MessagesState)
 builder.add_node("assistant", asssistant)
-builder.add_node("tools", ToolNode(tools))
+# builder.add_node("tools", ToolNode())
 
 builder.add_edge(START, "assistant")
 builder.add_conditional_edges("assistant", tools_condition)

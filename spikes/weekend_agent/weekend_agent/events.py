@@ -1,16 +1,8 @@
-class EventExtracter:
-    extract_instructions = """
-        You will be given a context that has text extracted from a website that contains a list of events and your job is to extract events from the list in a specific format. 
+from typing import Optional
 
-        Context: {context}
-    """
-    
-    def __init__(self, model_name: str):
-        self.model_name = 
-    
-    def extract_events(content: str) -> Events:
-
-
+from langchain_core.messages import SystemMessage
+from langchain_openai import ChatOpenAI
+from pydantic import BaseModel, Field
 
 
 class Event(BaseModel):
@@ -23,11 +15,25 @@ class Events(BaseModel):
     events: list[Event] = Field(default_factory=list, description="List of events")
 
 
-llm = ChatOpenAI(model="gpt-4o-mini")
-llm_with_structured_output = llm.with_structured_output(Events)
+class EventExtracter:
+    _extract_instructions = """
+        You will be given a context that has text extracted from a website that contains a list of events and your job is to extract events from the list in a specific format. 
 
-response = llm_with_structured_output.invoke(
-    [SystemMessage(content=extract_instructions.format(context=doc.page_content))]
-)
+        Context: {context}
+    """
 
-print(response.events)
+    def __init__(self, model_name: str = "gpt-4o-mini"):
+        self.model_name = model_name
+        base_llm = ChatOpenAI(model=model_name)
+        self.llm = base_llm.with_structured_output(Events)
+
+    def extract_events(self, content: str) -> list[Event]:
+        event_list = self.llm.invoke(
+            [
+                SystemMessage(
+                    content=EventExtracter._extract_instructions.format(context=content)
+                )
+            ]
+        )
+        assert isinstance(event_list, Events)
+        return event_list.events if event_list.events else []
