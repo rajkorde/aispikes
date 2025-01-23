@@ -22,6 +22,18 @@ assert events
 date_extracter = DateExtracter()
 date_extracter.get_date_range(events[10].date)
 
+for event in events:
+    date_range = date_extracter.get_date_range(event.date)
+    print(f"Name: {event.name}")
+    if event.description:
+        print(f"Name: {event.description}")
+    if date_range.start_date == date_range.end_date:
+        print(f"Date: {date_range.start_date.strftime('%b %d, %Y')}")
+    else:
+        print(f"Date: {date_range.start_date.strftime('%b %d, %Y')}")
+        print(f"Date: {date_range.end_date.strftime('%b %d, %Y')}")
+    print("-----")
+
 
 llm = ChatOpenAI(model="gpt-4o-mini")
 
