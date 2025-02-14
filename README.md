@@ -1,2 +1,3 @@
 # aispikes
-Various AI tests
+
+Various AI test projects and learnings

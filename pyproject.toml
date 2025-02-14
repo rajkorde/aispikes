@@ -1,0 +1,7 @@
+[project]
+name = "aispikes"
+version = "0.1.0"
+description = "Various AI tests"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
