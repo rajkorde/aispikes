@@ -1,0 +1,14 @@
+[project]
+name = "pydantic-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-ai>=0.0.24",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
