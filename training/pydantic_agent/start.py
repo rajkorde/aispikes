@@ -1,10 +1,16 @@
 import asyncio
+import os
+import tracemalloc
 from dataclasses import dataclass
 
+import logfire
 import nest_asyncio  # type: ignore
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent, RunContext
+
+tracemalloc.start()
+assert load_dotenv()
 
 
 @dataclass
@@ -62,8 +68,11 @@ async def main():
     result = await support_agent.run("What is my balance?", deps=deps)
     print(result.data)
 
+    result = await support_agent.run("I just lost my card!", deps=deps)
+    print(result.data)
+
 
 if __name__ == "__main__":
-    assert load_dotenv()
     nest_asyncio.apply()
+    logfire.configure(token=os.environ["LOGFIRE_TOKEN"])
     asyncio.run(main())
