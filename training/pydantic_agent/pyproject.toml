@@ -7,6 +7,12 @@ requires-python = ">=3.12"
 dependencies = [
     "logfire>=3.5.3",
     "nest-asyncio>=1.6.0",
+    "pydantic>=2.10.6",
     "pydantic-ai>=0.0.24",
     "python-dotenv>=1.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
 ]
