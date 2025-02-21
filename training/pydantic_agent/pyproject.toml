@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "devtools>=0.12.2",
     "logfire>=3.5.3",
     "nest-asyncio>=1.6.0",
     "pydantic>=2.10.6",
