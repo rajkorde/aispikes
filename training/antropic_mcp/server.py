@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("Adder Demo")
+mcp = FastMCP("Demo")
 
 
 @mcp.tool()
