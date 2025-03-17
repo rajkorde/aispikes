@@ -5,3 +5,6 @@ description = "Various AI tests"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[tool.uv.workspace]
+members = ["spikes/thoughtful_ai"]
