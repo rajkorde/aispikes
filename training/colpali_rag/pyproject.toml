@@ -5,8 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "cohere>=5.14.0",
     "colpali-engine>=0.3.8",
     "ipykernel>=6.29.5",
     "jupyter>=1.1.1",
+    "lancedb>=0.21.2",
+    "openai>=1.69.0",
+    "pandas>=2.2.3",
     "pygments>=2.19.1",
+    "pylance>=0.25.1",
+    "python-dotenv>=1.1.0",
+    "tantivy>=0.22.2",
+    "wikipedia-api>=0.8.1",
 ]
