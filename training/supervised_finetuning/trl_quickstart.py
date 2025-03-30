@@ -15,7 +15,7 @@ class SFTConfigWithMPS(SFTConfig):
 dataset = load_dataset("stanfordnlp/imdb", split="train")
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
-training_args = SFTConfigWithMPS(max_seq_length=512, output_dir="/tmp")
+training_args = SFTConfig(max_seq_length=512, output_dir="/tmp")
 trainer = SFTTrainer("facebook/opt-350m", train_dataset=dataset, args=training_args)
 
 trainer.train()
