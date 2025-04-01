@@ -73,3 +73,7 @@ Answer:"""
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Error: {str(e)}"
+
+
+answer = generate_answer(question=query, contexts=results["text"].tolist())
+print(answer)
