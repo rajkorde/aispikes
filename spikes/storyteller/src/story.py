@@ -2,18 +2,21 @@ from pydantic import BaseModel, Field
 
 
 class Student(BaseModel):
+    scenario_id: str
     name: str
     interests: str
     age: int
 
 
 class StoryCondition(BaseModel):
+    scenario_id: str
     student: Student
     situation: str
-    guidance: str
+    guidance: str | None = None
 
 
 class Story(BaseModel):
+    scenario_id: str
     student: Student
     condition: StoryCondition
     text: str = ""

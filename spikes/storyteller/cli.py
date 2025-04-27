@@ -1,6 +1,8 @@
+import uuid
+
 import typer
 from dotenv import load_dotenv
-from rich.prompt import Confirm, Prompt
+from rich.prompt import IntPrompt, Prompt
 from src.story import Story, StoryCondition, Student
 
 assert load_dotenv()
@@ -16,12 +18,18 @@ def version_callback(value: bool):
         raise typer.Exit()
 
 
+def print_header():
+    typer.secho("\n-----------------------", fg=typer.colors.GREEN, bold=True)
+    typer.secho("Welcome to Storyteller!", fg=typer.colors.GREEN, bold=True)
+    typer.secho("-----------------------\n", fg=typer.colors.GREEN, bold=True)
+
+
 # get student info
-def ask_student_questions() -> dict[str, str | bool]:
-    answers: dict[str, str | bool] = {}
+def ask_student_questions() -> dict[str, str | int]:
+    answers: dict[str, str | int] = {}
     try:
         answers["name"] = Prompt.ask("What is the name of the student?")
-        answers["age"] = Prompt.ask("What is their age?")
+        answers["age"] = IntPrompt.ask("What is their age?")
         answers["interests"] = Prompt.ask("What are their interests?")
         answers["situation"] = Prompt.ask(
             "What is student situation that needs correcting?"
@@ -37,13 +45,36 @@ def ask_student_questions() -> dict[str, str | bool]:
 
 @app.command()
 def get_student_info():
-    typer.secho("\n-----------------------", fg=typer.colors.GREEN, bold=True)
-    typer.secho("Welcome to Storyteller!", fg=typer.colors.GREEN, bold=True)
-    typer.secho("-----------------------\n", fg=typer.colors.GREEN, bold=True)
+    print_header()
     responses = ask_student_questions()
+
     typer.secho("\nYour responses:", fg=typer.colors.CYAN, bold=True)
     for key, value in responses.items():
         typer.echo(f"{key.capitalize()}: {value}")
+
+    assert isinstance(responses["name"], str)
+    assert isinstance(responses["interests"], str)
+    assert isinstance(responses["age"], int)
+
+    scenario_id = str(uuid.uuid4())
+    student = Student(
+        name=responses["name"],
+        interests=responses["interests"],
+        age=responses["age"],
+        scenario_id=scenario_id,
+    )
+
+    assert isinstance(responses["situation"], str)
+    assert isinstance(responses["guidance"], str | None)
+    guidance = None if not responses["guidance"] else responses["guidance"]
+    story_condition = StoryCondition(
+        scenario_id=scenario_id,
+        student=student,
+        situation=responses["situation"],
+        guidance=guidance,
+    )
+
+    print(f"{story_condition=}")
 
 
 # get story condition
