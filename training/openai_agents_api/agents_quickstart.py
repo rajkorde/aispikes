@@ -2,6 +2,7 @@ import asyncio
 
 import nest_asyncio
 from agents import Agent, GuardrailFunctionOutput, InputGuardrail, Runner
+from agents.extensions.visualization import draw_graph
 from dotenv import load_dotenv
 from pydantic import BaseModel
 
@@ -57,9 +58,10 @@ triage_agent = Agent(
 
 
 async def main():
-    result = await Runner.run(triage_agent, "what is life?")
+    result = await Runner.run(triage_agent, "what was the last chinese dynasty?")
     print(result.final_output)
     return result
 
 
 result = asyncio.run(main())
+draw_graph(triage_agent)

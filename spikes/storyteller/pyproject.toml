@@ -1,0 +1,19 @@
+[project]
+name = "storyteller"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=1.76.0",
+    "pydantic>=2.11.3",
+    "python-dotenv>=1.1.0",
+    "rich>=14.0.0",
+    "typer>=0.15.2",
+]
+
+[dependency-groups]
+dev = [
+    "pip>=25.1",
+    "pytest>=8.3.5",
+]
