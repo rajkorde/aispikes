@@ -176,3 +176,6 @@ __pypackages__
 
 *test*
 test.db
+
+**/data/
+**/database/

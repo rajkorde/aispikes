@@ -1,0 +1,10 @@
+{
+  "if_directory_empty": "download_last",
+  "podcasts": [
+    {
+      "name": "Latent Space",
+      "rss_link": "https://rss.flightcast.com/vgnxzgiwwzwke85ym53fjnzu.xml",
+      "path": "data/podcasts/latent_space"
+    }
+  ]
+}

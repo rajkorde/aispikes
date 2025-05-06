@@ -1,0 +1,26 @@
+[project]
+name = "podcastry"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.6.0",
+    "lancedb>=0.22.0",
+    "loguru>=0.7.3",
+    "mlx-whisper>=0.4.2",
+    "openai>=1.77.0",
+    "pandas>=2.2.3",
+    "podcast-downloader>=0.8.1",
+    "pyarrow>=20.0.0",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.1.0",
+    "sentence-transformers>=4.1.0",
+    "uuid>=1.30",
+]
+
+[dependency-groups]
+dev = [
+    "pip>=25.1.1",
+    "pytest>=8.3.5",
+]
