@@ -1,5 +1,5 @@
 {
-  "if_directory_empty": "download_last",
+  "if_directory_empty": "download_last_3_episodes",
   "podcasts": [
     {
       "name": "Latent Space",
