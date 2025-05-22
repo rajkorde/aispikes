@@ -1,0 +1,58 @@
+{
+  "2401.03129v1": {
+    "title": "Examining Forgetting in Continual Pre-training of Aligned Large Language Models",
+    "authors": [
+      "Chen-An Li",
+      "Hung-Yi Lee"
+    ],
+    "summary": "Recent advances in Large Language Models (LLMs) have exhibited remarkable\nproficiency across various tasks. Given the potent applications of LLMs in\nnumerous fields, there has been a surge in LLM development. In developing LLMs,\na common practice involves continual pre-training on previously fine-tuned\nmodels. However, this can lead to catastrophic forgetting. In our work, we\ninvestigate the phenomenon of forgetting that occurs during continual\npre-training on an existing fine-tuned LLM. We evaluate the impact of\ncontinuous pre-training on the fine-tuned LLM across various dimensions,\nincluding output format, knowledge, and reliability. Experiment results\nhighlight the non-trivial challenge of addressing catastrophic forgetting\nduring continual pre-training, especially the repetition issue.",
+    "pdf_url": "http://arxiv.org/pdf/2401.03129v1",
+    "published": "2024-01-06"
+  },
+  "2401.13601v5": {
+    "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+    "authors": [
+      "Duzhen Zhang",
+      "Yahan Yu",
+      "Jiahua Dong",
+      "Chenxing Li",
+      "Dan Su",
+      "Chenhui Chu",
+      "Dong Yu"
+    ],
+    "summary": "In the past year, MultiModal Large Language Models (MM-LLMs) have undergone\nsubstantial advancements, augmenting off-the-shelf LLMs to support MM inputs or\noutputs via cost-effective training strategies. The resulting models not only\npreserve the inherent reasoning and decision-making capabilities of LLMs but\nalso empower a diverse range of MM tasks. In this paper, we provide a\ncomprehensive survey aimed at facilitating further research of MM-LLMs.\nInitially, we outline general design formulations for model architecture and\ntraining pipeline. Subsequently, we introduce a taxonomy encompassing 126\nMM-LLMs, each characterized by its specific formulations. Furthermore, we\nreview the performance of selected MM-LLMs on mainstream benchmarks and\nsummarize key training recipes to enhance the potency of MM-LLMs. Finally, we\nexplore promising directions for MM-LLMs while concurrently maintaining a\nreal-time tracking website for the latest developments in the field. We hope\nthat this survey contributes to the ongoing advancement of the MM-LLMs domain.",
+    "pdf_url": "http://arxiv.org/pdf/2401.13601v5",
+    "published": "2024-01-24"
+  },
+  "2404.14809v1": {
+    "title": "A Survey of Large Language Models on Generative Graph Analytics: Query, Learning, and Applications",
+    "authors": [
+      "Wenbo Shang",
+      "Xin Huang"
+    ],
+    "summary": "A graph is a fundamental data model to represent various entities and their\ncomplex relationships in society and nature, such as social networks,\ntransportation networks, financial networks, and biomedical systems. Recently,\nlarge language models (LLMs) have showcased a strong generalization ability to\nhandle various NLP and multi-mode tasks to answer users' arbitrary questions\nand specific-domain content generation. Compared with graph learning models,\nLLMs enjoy superior advantages in addressing the challenges of generalizing\ngraph tasks by eliminating the need for training graph learning models and\nreducing the cost of manual annotation. In this survey, we conduct a\ncomprehensive investigation of existing LLM studies on graph data, which\nsummarizes the relevant graph analytics tasks solved by advanced LLM models and\npoints out the existing remaining challenges and future directions.\nSpecifically, we study the key problems of LLM-based generative graph analytics\n(LLM-GGA) with three categories: LLM-based graph query processing (LLM-GQP),\nLLM-based graph inference and learning (LLM-GIL), and graph-LLM-based\napplications. LLM-GQP focuses on an integration of graph analytics techniques\nand LLM prompts, including graph understanding and knowledge graph (KG) based\naugmented retrieval, while LLM-GIL focuses on learning and reasoning over\ngraphs, including graph learning, graph-formed reasoning and graph\nrepresentation. We summarize the useful prompts incorporated into LLM to handle\ndifferent graph downstream tasks. Moreover, we give a summary of LLM model\nevaluation, benchmark datasets/tasks, and a deep pro and cons analysis of LLM\nmodels. We also explore open problems and future directions in this exciting\ninterdisciplinary research area of LLMs and graph analytics.",
+    "pdf_url": "http://arxiv.org/pdf/2404.14809v1",
+    "published": "2024-04-23"
+  },
+  "2407.12036v2": {
+    "title": "Exploring Advanced Large Language Models with LLMsuite",
+    "authors": [
+      "Giorgio Roffo"
+    ],
+    "summary": "This tutorial explores the advancements and challenges in the development of\nLarge Language Models (LLMs) such as ChatGPT and Gemini. It addresses inherent\nlimitations like temporal knowledge cutoffs, mathematical inaccuracies, and the\ngeneration of incorrect information, proposing solutions like Retrieval\nAugmented Generation (RAG), Program-Aided Language Models (PAL), and frameworks\nsuch as ReAct and LangChain. The integration of these techniques enhances LLM\nperformance and reliability, especially in multi-step reasoning and complex\ntask execution. The paper also covers fine-tuning strategies, including\ninstruction fine-tuning, parameter-efficient methods like LoRA, and\nReinforcement Learning from Human Feedback (RLHF) as well as Reinforced\nSelf-Training (ReST). Additionally, it provides a comprehensive survey of\ntransformer architectures and training techniques for LLMs. The source code can\nbe accessed by contacting the author via email for a request.",
+    "pdf_url": "http://arxiv.org/pdf/2407.12036v2",
+    "published": "2024-07-01"
+  },
+  "2502.11275v1": {
+    "title": "Cuckoo: An IE Free Rider Hatched by Massive Nutrition in LLM's Nest",
+    "authors": [
+      "Letian Peng",
+      "Zilong Wang",
+      "Feng Yao",
+      "Jingbo Shang"
+    ],
+    "summary": "Massive high-quality data, both pre-training raw texts and post-training\nannotations, have been carefully prepared to incubate advanced large language\nmodels (LLMs). In contrast, for information extraction (IE), pre-training data,\nsuch as BIO-tagged sequences, are hard to scale up. We show that IE models can\nact as free riders on LLM resources by reframing next-token \\emph{prediction}\ninto \\emph{extraction} for tokens already present in the context. Specifically,\nour proposed next tokens extraction (NTE) paradigm learns a versatile IE model,\n\\emph{Cuckoo}, with 102.6M extractive data converted from LLM's pre-training\nand post-training data. Under the few-shot setting, Cuckoo adapts effectively\nto traditional and complex instruction-following IE with better performance\nthan existing pre-trained IE models. As a free rider, Cuckoo can naturally\nevolve with the ongoing advancements in LLM data preparation, benefiting from\nimprovements in LLM training pipelines without additional manual effort.",
+    "pdf_url": "http://arxiv.org/pdf/2502.11275v1",
+    "published": "2025-02-16"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "2402.17193v1": {
+    "title": "When Scaling Meets LLM Finetuning: The Effect of Data, Model and Finetuning Method",
+    "authors": [
+      "Biao Zhang",
+      "Zhongtao Liu",
+      "Colin Cherry",
+      "Orhan Firat"
+    ],
+    "summary": "While large language models (LLMs) often adopt finetuning to unlock their\ncapabilities for downstream applications, our understanding on the inductive\nbiases (especially the scaling properties) of different finetuning methods is\nstill limited. To fill this gap, we conduct systematic experiments studying\nwhether and how different scaling factors, including LLM model size,\npretraining data size, new finetuning parameter size and finetuning data size,\naffect the finetuning performance. We consider two types of finetuning --\nfull-model tuning (FMT) and parameter efficient tuning (PET, including prompt\ntuning and LoRA), and explore their scaling behaviors in the data-limited\nregime where the LLM model size substantially outweighs the finetuning data\nsize. Based on two sets of pretrained bilingual LLMs from 1B to 16B and\nexperiments on bilingual machine translation and multilingual summarization\nbenchmarks, we find that 1) LLM finetuning follows a powerbased multiplicative\njoint scaling law between finetuning data size and each other scaling factor;\n2) LLM finetuning benefits more from LLM model scaling than pretraining data\nscaling, and PET parameter scaling is generally ineffective; and 3) the optimal\nfinetuning method is highly task- and finetuning data-dependent. We hope our\nfindings could shed light on understanding, selecting and developing LLM\nfinetuning methods.",
+    "pdf_url": "http://arxiv.org/pdf/2402.17193v1",
+    "published": "2024-02-27"
+  },
+  "2406.19292v2": {
+    "title": "From Artificial Needles to Real Haystacks: Improving Retrieval Capabilities in LLMs by Finetuning on Synthetic Data",
+    "authors": [
+      "Zheyang Xiong",
+      "Vasilis Papageorgiou",
+      "Kangwook Lee",
+      "Dimitris Papailiopoulos"
+    ],
+    "summary": "Recent studies have shown that Large Language Models (LLMs) struggle to\naccurately retrieve information and maintain reasoning capabilities when\nprocessing long-context inputs. To address these limitations, we propose a\nfinetuning approach utilizing a carefully designed synthetic dataset comprising\nnumerical key-value retrieval tasks. Our experiments on models like GPT-3.5\nTurbo and Mistral 7B demonstrate that finetuning LLMs on this dataset\nsignificantly improves LLMs' information retrieval and reasoning capabilities\nin longer-context settings. We present an analysis of the finetuned models,\nillustrating the transfer of skills from synthetic to real task evaluations\n(e.g., $10.5\\%$ improvement on $20$ documents MDQA at position $10$ for GPT-3.5\nTurbo). We also find that finetuned LLMs' performance on general benchmarks\nremains almost constant while LLMs finetuned on other baseline long-context\naugmentation data can encourage hallucination (e.g., on TriviaQA, Mistral 7B\nfinetuned on our synthetic data cause no performance drop while other baseline\ndata can cause a drop that ranges from $2.33\\%$ to $6.19\\%$). Our study\nhighlights the potential of finetuning on synthetic data for improving the\nperformance of LLMs on longer-context tasks.",
+    "pdf_url": "http://arxiv.org/pdf/2406.19292v2",
+    "published": "2024-06-27"
+  },
+  "2401.13986v1": {
+    "title": "Towards Consistent Natural-Language Explanations via Explanation-Consistency Finetuning",
+    "authors": [
+      "Yanda Chen",
+      "Chandan Singh",
+      "Xiaodong Liu",
+      "Simiao Zuo",
+      "Bin Yu",
+      "He He",
+      "Jianfeng Gao"
+    ],
+    "summary": "Large language models (LLMs) often generate convincing, fluent explanations.\nHowever, different from humans, they often generate inconsistent explanations\non different inputs. For example, an LLM may generate the explanation \"all\nbirds can fly\" when answering the question \"Can sparrows fly?\" but meanwhile\nanswer \"no\" to the related question \"Can penguins fly?\". Explanations should be\nconsistent across related examples so that they allow a human to simulate the\nLLM's decision process on multiple examples. We propose explanation-consistency\nfinetuning (EC-finetuning), a method that adapts LLMs to generate more\nconsistent natural-language explanations on related examples. EC-finetuning\ninvolves finetuning LLMs on synthetic data that is carefully constructed to\ncontain consistent explanations. Across a variety of question-answering\ndatasets in various domains, EC-finetuning yields a 10.0% relative explanation\nconsistency improvement on four finetuning datasets, and generalizes to seven\nout-of-distribution datasets not seen during finetuning (+4.5% relative). Code\nis available at https://github.com/yandachen/explanation-consistency-finetuning .",
+    "pdf_url": "http://arxiv.org/pdf/2401.13986v1",
+    "published": "2024-01-25"
+  },
+  "2309.16119v2": {
+    "title": "ModuLoRA: Finetuning 2-Bit LLMs on Consumer GPUs by Integrating with Modular Quantizers",
+    "authors": [
+      "Junjie Yin",
+      "Jiahao Dong",
+      "Yingheng Wang",
+      "Christopher De Sa",
+      "Volodymyr Kuleshov"
+    ],
+    "summary": "We propose a memory-efficient finetuning algorithm for large language models\n(LLMs) that supports finetuning LLMs with 65B parameters in 2/3/4-bit precision\non as little as one 24GB GPU. Our method, modular low-rank adaptation\n(ModuLoRA), integrates any user-specified weight quantizer with finetuning via\nlow-rank adapters (LoRAs). Our approach relies on a simple\nquantization-agnostic backward pass that adaptively materializes low-precision\nLLM weights from a custom black-box quantization module. This approach enables\nfinetuning 2-bit and 3-bit LLMs for the first time -- leveraging\nstate-of-the-art 2-bit QuIP\\# quantization and 3-bit OPTQ quantization --\noutperforming finetuning that relies on less sophisticated 4-bit and 8-bit\nmethods. In our experiments, \\lplora~attains competitive performance on text\nclassification, natural language inference, and instruction following tasks\nusing significantly less memory than existing approaches, and we also surpass\nthe state-of-the-art ROUGE score on a popular summarization task. We release\n\\lplora~together with a series of low-precision models as part of \\llmtune, a\nuser-friendly library for quantizing, running, and finetuning LLMs on consumer\nGPUs.",
+    "pdf_url": "http://arxiv.org/pdf/2309.16119v2",
+    "published": "2023-09-28"
+  },
+  "2504.21191v1": {
+    "title": "Small or Large? Zero-Shot or Finetuned? Guiding Language Model Choice for Specialized Applications in Healthcare",
+    "authors": [
+      "Lovedeep Gondara",
+      "Jonathan Simkin",
+      "Graham Sayle",
+      "Shebnum Devji",
+      "Gregory Arbour",
+      "Raymond Ng"
+    ],
+    "summary": "This study aims to guide language model selection by investigating: 1) the\nnecessity of finetuning versus zero-shot usage, 2) the benefits of\ndomain-adjacent versus generic pretrained models, 3) the value of further\ndomain-specific pretraining, and 4) the continued relevance of Small Language\nModels (SLMs) compared to Large Language Models (LLMs) for specific tasks.\nUsing electronic pathology reports from the British Columbia Cancer Registry\n(BCCR), three classification scenarios with varying difficulty and data size\nare evaluated. Models include various SLMs and an LLM. SLMs are evaluated both\nzero-shot and finetuned; the LLM is evaluated zero-shot only. Finetuning\nsignificantly improved SLM performance across all scenarios compared to their\nzero-shot results. The zero-shot LLM outperformed zero-shot SLMs but was\nconsistently outperformed by finetuned SLMs. Domain-adjacent SLMs generally\nperformed better than the generic SLM after finetuning, especially on harder\ntasks. Further domain-specific pretraining yielded modest gains on easier tasks\nbut significant improvements on the complex, data-scarce task. The results\nhighlight the critical role of finetuning for SLMs in specialized domains,\nenabling them to surpass zero-shot LLM performance on targeted classification\ntasks. Pretraining on domain-adjacent or domain-specific data provides further\nadvantages, particularly for complex problems or limited finetuning data. While\nLLMs offer strong zero-shot capabilities, their performance on these specific\ntasks did not match that of appropriately finetuned SLMs. In the era of LLMs,\nSLMs remain relevant and effective, offering a potentially superior\nperformance-resource trade-off compared to LLMs.",
+    "pdf_url": "http://arxiv.org/pdf/2504.21191v1",
+    "published": "2025-04-29"
+  },
+  "2401.07159v1": {
+    "title": "Quantized Side Tuning: Fast and Memory-Efficient Tuning of Quantized Large Language Models",
+    "authors": [
+      "Zhengxin Zhang",
+      "Dan Zhao",
+      "Xupeng Miao",
+      "Gabriele Oliaro",
+      "Qing Li",
+      "Yong Jiang",
+      "Zhihao Jia"
+    ],
+    "summary": "Finetuning large language models (LLMs) has been empirically effective on a\nvariety of downstream tasks. Existing approaches to finetuning an LLM either\nfocus on parameter-efficient finetuning, which only updates a small number of\ntrainable parameters, or attempt to reduce the memory footprint during the\ntraining phase of the finetuning. Typically, the memory footprint during\nfinetuning stems from three contributors: model weights, optimizer states, and\nintermediate activations. However, existing works still require considerable\nmemory and none can simultaneously mitigate memory footprint for all three\nsources. In this paper, we present Quantized Side Tuing (QST), which enables\nmemory-efficient and fast finetuning of LLMs by operating through a dual-stage\nprocess. First, QST quantizes an LLM's model weights into 4-bit to reduce the\nmemory footprint of the LLM's original weights; QST also introduces a side\nnetwork separated from the LLM, which utilizes the hidden states of the LLM to\nmake task-specific predictions. Using a separate side network avoids performing\nbackpropagation through the LLM, thus reducing the memory requirement of the\nintermediate activations. Furthermore, QST leverages several low-rank adaptors\nand gradient-free downsample modules to significantly reduce the trainable\nparameters, so as to save the memory footprint of the optimizer states.\nExperiments show that QST can reduce the total memory footprint by up to 2.3\n$\\times$ and speed up the finetuning process by up to 3 $\\times$ while\nachieving competent performance compared with the state-of-the-art. When it\ncomes to full finetuning, QST can reduce the total memory footprint up to 7\n$\\times$.",
+    "pdf_url": "http://arxiv.org/pdf/2401.07159v1",
+    "published": "2024-01-13"
+  },
+  "2306.14905v1": {
+    "title": "PRISMA-DFLLM: An Extension of PRISMA for Systematic Literature Reviews using Domain-specific Finetuned Large Language Models",
+    "authors": [
+      "Teo Susnjak"
+    ],
+    "summary": "With the proliferation of open-sourced Large Language Models (LLMs) and\nefficient finetuning techniques, we are on the cusp of the emergence of\nnumerous domain-specific LLMs that have been finetuned for expertise across\nspecialized fields and applications for which the current general-purpose LLMs\nare unsuitable. In academia, this technology has the potential to revolutionize\nthe way we conduct systematic literature reviews (SLRs), access knowledge and\ngenerate new insights. This paper proposes an AI-enabled methodological\nframework that combines the power of LLMs with the rigorous reporting\nguidelines of the Preferred Reporting Items for Systematic Reviews and\nMeta-Analyses (PRISMA). By finetuning LLMs on domain-specific academic papers\nthat have been selected as a result of a rigorous SLR process, the proposed\nPRISMA-DFLLM (for Domain-specific Finetuned LLMs) reporting guidelines offer\nthe potential to achieve greater efficiency, reusability and scalability, while\nalso opening the potential for conducting incremental living systematic reviews\nwith the aid of LLMs. Additionally, the proposed approach for leveraging LLMs\nfor SLRs enables the dissemination of finetuned models, empowering researchers\nto accelerate advancements and democratize cutting-edge research. This paper\npresents the case for the feasibility of finetuned LLMs to support rigorous\nSLRs and the technical requirements for realizing this. This work then proposes\nthe extended PRISMA-DFLLM checklist of reporting guidelines as well as the\nadvantages, challenges, and potential implications of implementing\nPRISMA-DFLLM. Finally, a future research roadmap to develop this line of\nAI-enabled SLRs is presented, paving the way for a new era of evidence\nsynthesis and knowledge discovery.",
+    "pdf_url": "http://arxiv.org/pdf/2306.14905v1",
+    "published": "2023-06-15"
+  },
+  "2402.05147v3": {
+    "title": "ApiQ: Finetuning of 2-Bit Quantized Large Language Model",
+    "authors": [
+      "Baohao Liao",
+      "Christian Herold",
+      "Shahram Khadivi",
+      "Christof Monz"
+    ],
+    "summary": "Memory-efficient finetuning of large language models (LLMs) has recently\nattracted huge attention with the increasing size of LLMs, primarily due to the\nconstraints posed by GPU memory limitations and the effectiveness of these\nmethods compared to full finetuning. Despite the advancements, current\nstrategies for memory-efficient finetuning, such as QLoRA, exhibit inconsistent\nperformance across diverse bit-width quantizations and multifaceted tasks. This\ninconsistency largely stems from the detrimental impact of the quantization\nprocess on preserved knowledge, leading to catastrophic forgetting and\nundermining the utilization of pretrained models for finetuning purposes. In\nthis work, we introduce a novel quantization framework, ApiQ, designed to\nrestore the lost information from quantization by concurrently initializing the\nLoRA components and quantizing the weights of LLMs. This approach ensures the\nmaintenance of the original LLM's activation precision while mitigating the\nerror propagation from shallower into deeper layers. Through comprehensive\nevaluations conducted on a spectrum of language tasks with various LLMs, ApiQ\ndemonstrably minimizes activation error during quantization. Consequently, it\nconsistently achieves superior finetuning results across various bit-widths.",
+    "pdf_url": "http://arxiv.org/pdf/2402.05147v3",
+    "published": "2024-02-07"
+  },
+  "2503.13089v1": {
+    "title": "ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning",
+    "authors": [
+      "Baohao Liao",
+      "Christian Herold",
+      "Seyyed Hadi Hashemi",
+      "Stefan Vasilev",
+      "Shahram Khadivi",
+      "Christof Monz"
+    ],
+    "summary": "As large language models (LLMs) scale, model compression is crucial for edge\ndeployment and accessibility. Weight-only quantization reduces model size but\nsuffers from performance degradation at lower bit widths. Moreover, standard\nfinetuning is incompatible with quantized models, and alternative methods often\nfall short of full finetuning. In this paper, we propose ClusComp, a simple yet\neffective compression paradigm that clusters weight matrices into codebooks and\nfinetunes them block-by-block. ClusComp (1) achieves superior performance in\n2-4 bit quantization, (2) pushes compression to 1-bit while outperforming\nultra-low-bit methods with minimal finetuning, and (3) enables efficient\nfinetuning, even surpassing existing quantization-based approaches and rivaling\nfull FP16 finetuning. Notably, ClusComp supports compression and finetuning of\n70B LLMs on a single A6000-48GB GPU.",
+    "pdf_url": "http://arxiv.org/pdf/2503.13089v1",
+    "published": "2025-03-17"
+  },
+  "2412.11378v2": {
+    "title": "FinLoRA: Finetuning Quantized Financial Large Language Models Using Low-Rank Adaptation",
+    "authors": [
+      "Dannong Wang",
+      "Daniel Kim",
+      "Bo Jin",
+      "Xingjian Zhao",
+      "Tianfan Fu",
+      "Steve Yang",
+      "Xiao-Yang Liu"
+    ],
+    "summary": "Finetuned large language models (LLMs) have shown remarkable performance in\nfinancial tasks, such as sentiment analysis and information retrieval. Due to\nprivacy concerns, finetuning and deploying Financial LLMs (FinLLMs) locally are\ncrucial for institutions. However, finetuning FinLLMs poses challenges\nincluding GPU memory constraints and long input sequences. In this paper, we\nemploy quantized low-rank adaptation (QLoRA) to finetune FinLLMs, which\nleverage low-rank matrix decomposition and quantization techniques to\nsignificantly reduce computational requirements while maintaining high model\nperformance. We also employ data and pipeline parallelism to enable local\nfinetuning using cost-effective, widely accessible GPUs. Experiments on\nfinancial datasets demonstrate that our method achieves substantial\nimprovements in accuracy, GPU memory usage, and time efficiency, underscoring\nthe potential of lowrank methods for scalable and resource-efficient LLM\nfinetuning.",
+    "pdf_url": "http://arxiv.org/pdf/2412.11378v2",
+    "published": "2024-12-16"
+  }
+}
