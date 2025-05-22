@@ -1,0 +1,20 @@
+{
+  "gr-qc/0612006v1": {
+    "title": "The Xi-transform for conformally flat space-time",
+    "authors": [
+      "George Sparling"
+    ],
+    "summary": "The Xi-transform is a new spinor transform arising naturally in Einstein's\ngeneral relativity. Here the example of conformally flat space-time is\ndiscussed in detail. In particular it is shown that for this case, the\ntransform coincides with two other naturally defined transforms: one a\ntwo-variable transform on the Lie group SU(2, C), the other a transform on the\nspace of null split octaves. The key properties of the transform are developed.",
+    "pdf_url": "http://arxiv.org/pdf/gr-qc/0612006v1",
+    "published": "2006-12-01"
+  },
+  "1310.1984v2": {
+    "title": "Multiple basic hypergeometric transformation formulas arising from the balanced duality transformation",
+    "authors": [
+      "Yasushi Kajihara"
+    ],
+    "summary": "Some multiple hypergeometric transformation formulas arising from the\nbalanced du- ality transformation formula are discussed through the symmetry.\nDerivations of some transformation formulas with different dimensions are given\nby taking certain limits of the balanced duality transformation. By combining\nsome of them, some transformation formulas for $A_n$ basic hypergeometric\nseries is given. They include some generalizations of Watson, Sears and ${}_8\nW_7$ transformations.",
+    "pdf_url": "http://arxiv.org/pdf/1310.1984v2",
+    "published": "2013-10-08"
+  }
+}

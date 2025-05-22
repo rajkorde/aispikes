@@ -1,0 +1,58 @@
+{
+  "1512.00360v1": {
+    "title": "War of 2050: a Battle for Information, Communications, and Computer Security",
+    "authors": [
+      "Alexander Kott",
+      "David S. Alberts",
+      "Cliff Wang"
+    ],
+    "summary": "As envisioned in a recent future-casting workshop, warfare will continue to\nbe transformed by advances in information technologies. In fact, information\nitself will become the decisive domain of warfare. Four developments will\nsignificantly change the nature of the battle. The first of these will be a\nproliferation of intelligent systems; the second, augmented humans; the third,\nthe decisive battle for the information domain; and the fourth, the\nintroduction of new, networked approaches to command and control. Each of these\nnew capabilities possesses the same critical vulnerability - attacks on the\ninformation, communications and computers that will enable human-robot teams to\nmake sense of the battlefield and act decisively. Hence, the largely unseen\nbattle for information, communications and computer security will determine the\nextent to which adversaries will be able to function and succeed on the\nbattlefield of 2050.",
+    "pdf_url": "http://arxiv.org/pdf/1512.00360v1",
+    "published": "2015-11-27"
+  },
+  "0901.1170v1": {
+    "title": "Internal network dynamics prolong a losing battle",
+    "authors": [
+      "Zhenyuan Zhao",
+      "Juan Camilo Bohorquez",
+      "Alex Dixon",
+      "Neil F. Johnson"
+    ],
+    "summary": "Fights-to-the-death occur in many natural, medical and commercial settings.\nStandard mass action theory and conventional wisdom imply that the minority\n(i.e. smaller) group's survival time decreases as its relative initial size\ndecreases, in the absence of replenishment. Here we show that the opposite\nactually happens, if the minority group features internal network dynamics. Our\nanalytic theory provides a unified quantitative explanation for a range of\npreviously unexplained data, and predicts how losing battles in a medical or\nsocial context might be extended or shortened using third-party intervention.",
+    "pdf_url": "http://arxiv.org/pdf/0901.1170v1",
+    "published": "2009-01-09"
+  },
+  "2402.01118v3": {
+    "title": "PokeLLMon: A Human-Parity Agent for Pokemon Battles with Large Language Models",
+    "authors": [
+      "Sihao Hu",
+      "Tiansheng Huang",
+      "Ling Liu"
+    ],
+    "summary": "We introduce PokeLLMon, the first LLM-embodied agent that achieves\nhuman-parity performance in tactical battle games, as demonstrated in Pokemon\nbattles. The design of PokeLLMon incorporates three key strategies: (i)\nIn-context reinforcement learning that instantly consumes text-based feedback\nderived from battles to iteratively refine the policy; (ii) Knowledge-augmented\ngeneration that retrieves external knowledge to counteract hallucination and\nenables the agent to act timely and properly; (iii) Consistent action\ngeneration to mitigate the panic switching phenomenon when the agent faces a\npowerful opponent and wants to elude the battle. We show that online battles\nagainst human demonstrates PokeLLMon's human-like battle strategies and\njust-in-time decision making, achieving 49% of win rate in the Ladder\ncompetitions and 56% of win rate in the invited battles. Our implementation and\nplayable battle logs are available at: https://github.com/git-disl/PokeLLMon.",
+    "pdf_url": "http://arxiv.org/pdf/2402.01118v3",
+    "published": "2024-02-02"
+  },
+  "1906.04435v1": {
+    "title": "Enhancing Battle Maps through Flow Graphs",
+    "authors": [
+      "G\u00fcnter Wallner"
+    ],
+    "summary": "So-called battle maps are an appropriate way to visually summarize the flow\nof battles as they happen in many team-based combat games. Such maps can be a\nvaluable tool for retrospective analysis of battles for the purpose of training\nor for providing a summary representation for spectators. In this paper an\nextension to the battle map algorithm previously proposed by the author and\nwhich addresses a shortcoming in the depiction of troop movements is described.\nThe extension does not require alteration of the original algorithm and can\neasily be added as an intermediate step before rendering. The extension is\nillustrated using gameplay data from the team-based multiplayer game World of\nTanks.",
+    "pdf_url": "http://arxiv.org/pdf/1906.04435v1",
+    "published": "2019-06-11"
+  },
+  "2504.04395v1": {
+    "title": "Human-Level Competitive Pok\u00e9mon via Scalable Offline Reinforcement Learning with Transformers",
+    "authors": [
+      "Jake Grigsby",
+      "Yuqi Xie",
+      "Justin Sasek",
+      "Steven Zheng",
+      "Yuke Zhu"
+    ],
+    "summary": "Competitive Pok\\'emon Singles (CPS) is a popular strategy game where players\nlearn to exploit their opponent based on imperfect information in battles that\ncan last more than one hundred stochastic turns. AI research in CPS has been\nled by heuristic tree search and online self-play, but the game may also create\na platform to study adaptive policies trained offline on large datasets. We\ndevelop a pipeline to reconstruct the first-person perspective of an agent from\nlogs saved from the third-person perspective of a spectator, thereby unlocking\na dataset of real human battles spanning more than a decade that grows larger\nevery day. This dataset enables a black-box approach where we train large\nsequence models to adapt to their opponent based solely on their input\ntrajectory while selecting moves without explicit search of any kind. We study\na progression from imitation learning to offline RL and offline fine-tuning on\nself-play data in the hardcore competitive setting of Pok\\'emon's four oldest\n(and most partially observed) game generations. The resulting agents outperform\na recent LLM Agent approach and a strong heuristic search engine. While playing\nanonymously in online battles against humans, our best agents climb to rankings\ninside the top 10% of active players.",
+    "pdf_url": "http://arxiv.org/pdf/2504.04395v1",
+    "published": "2025-04-06"
+  }
+}

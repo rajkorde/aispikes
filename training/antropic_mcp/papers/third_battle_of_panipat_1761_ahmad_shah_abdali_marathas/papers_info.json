@@ -1,0 +1,63 @@
+{
+  "2202.06267v1": {
+    "title": "T-Controllability of Evolution Systems having Non-instantaneous Impulses",
+    "authors": [
+      "Vishant Shah",
+      "Kalpesh Bharvad",
+      "Dipsha Bhadrecha",
+      "Aashi Maratha",
+      "Jaita Sharma",
+      "Dhanesh Patel"
+    ],
+    "summary": "In this manuscript, we have considered the system governed by a\nnoninstantaneous impulsive dynamical system of integer order with classical and\nnonlocal conditions and derived sufficient conditions for the trajectory\ncontrollability of the system on the Banach space. The conditions were obtained\nthrough the concept of semigroup properties of operator and Gronwall's\ninequality. Finally, illustrations with classical and nonlocal conditions were\nalso added to validate the derived conditions.",
+    "pdf_url": "http://arxiv.org/pdf/2202.06267v1",
+    "published": "2022-02-13"
+  },
+  "2102.07857v1": {
+    "title": "KNH: Multi-View Modeling with K-Nearest Hyperplanes Graph for Misinformation Detection",
+    "authors": [
+      "Sara Abdali",
+      "Neil Shah",
+      "Evangelos E. Papalexakis"
+    ],
+    "summary": "Graphs are one of the most efficacious structures for representing datapoints\nand their relations, and they have been largely exploited for different\napplications. Previously, the higher-order relations between the nodes have\nbeen modeled by a generalization of graphs known as hypergraphs. In\nhypergraphs, the edges are defined by a set of nodes i.e., hyperedges to\ndemonstrate the higher order relationships between the data. However, there is\nno explicit higher-order generalization for nodes themselves. In this work, we\nintroduce a novel generalization of graphs i.e., K-Nearest Hyperplanes graph\n(KNH) where the nodes are defined by higher order Euclidean subspaces for\nmulti-view modeling of the nodes. In fact, in KNH, nodes are hyperplanes or\nmore precisely m-flats instead of datapoints. We experimentally evaluate the\nKNH graph on two multi-aspect datasets for misinformation detection. The\nexperimental results suggest that multi-view modeling of articles using KNH\ngraph outperforms the classic KNN graph in terms of classification performance.",
+    "pdf_url": "http://arxiv.org/pdf/2102.07857v1",
+    "published": "2021-02-15"
+  },
+  "quant-ph/0110096v3": {
+    "title": "Dilemma and Quantum Battle of Sexes",
+    "authors": [
+      "Ahmad Nawaz",
+      "A. H. Toor"
+    ],
+    "summary": "We analysed quantum version of the game battle of sexes using a general\ninitial quantum state. For a particular choice of initial entangled quantum\nstate it is shown that the classical dilemma of the battle of sexes can be\nresolved and a unique solution of the game can be obtained.",
+    "pdf_url": "http://arxiv.org/pdf/quant-ph/0110096v3",
+    "published": "2001-10-16"
+  },
+  "2005.04310v2": {
+    "title": "Semi-Supervised Multi-aspect Detection of Misinformation using Hierarchical Joint Decomposition",
+    "authors": [
+      "Sara Abdali",
+      "Neil Shah",
+      "Evangelos E. Papalexakis"
+    ],
+    "summary": "Distinguishing between misinformation and real information is one of the most\nchallenging problems in today's interconnected world. The vast majority of the\nstate-of-the-art in detecting misinformation is fully supervised, requiring a\nlarge number of high-quality human annotations. However, the availability of\nsuch annotations cannot be taken for granted, since it is very costly,\ntime-consuming, and challenging to do so in a way that keeps up with the\nproliferation of misinformation. In this work, we are interested in exploring\nscenarios where the number of annotations is limited. In such scenarios, we\ninvestigate how tapping on a diverse number of resources that characterize a\nnews article, henceforth referred to as \"aspects\" can compensate for the lack\nof labels. In particular, our contributions in this paper are twofold: 1) We\npropose the use of three different aspects: article content, context of social\nsharing behaviors, and host website/domain features, and 2) We introduce a\nprincipled tensor based embedding framework that combines all those aspects\neffectively. We propose HiJoD a 2-level decomposition pipeline which not only\noutperforms state-of-the-art methods with F1-scores of 74% and 81% on Twitter\nand Politifact datasets respectively but also is an order of magnitude faster\nthan similar ensemble approaches.",
+    "pdf_url": "http://arxiv.org/pdf/2005.04310v2",
+    "published": "2020-05-08"
+  },
+  "2102.07849v2": {
+    "title": "Identifying Misinformation from Website Screenshots",
+    "authors": [
+      "Sara Abdali",
+      "Rutuja Gurav",
+      "Siddharth Menon",
+      "Daniel Fonseca",
+      "Negin Entezari",
+      "Neil Shah",
+      "Evangelos E. Papalexakis"
+    ],
+    "summary": "Can the look and the feel of a website give information about the\ntrustworthiness of an article? In this paper, we propose to use a promising,\nyet neglected aspect in detecting the misinformativeness: the overall look of\nthe domain webpage. To capture this overall look, we take screenshots of news\narticles served by either misinformative or trustworthy web domains and\nleverage a tensor decomposition based semi-supervised classification technique.\nThe proposed approach i.e., VizFake is insensitive to a number of image\ntransformations such as converting the image to grayscale, vectorizing the\nimage and losing some parts of the screenshots. VizFake leverages a very small\namount of known labels, mirroring realistic and practical scenarios, where\nlabels (especially for known misinformative articles), are scarce and quickly\nbecome dated. The F1 score of VizFake on a dataset of 50k screenshots of news\narticles spanning more than 500 domains is roughly 85% using only 5% of ground\ntruth labels. Furthermore, tensor representations of VizFake, obtained in an\nunsupervised manner, allow for exploratory analysis of the data that provides\nvaluable insights into the problem. Finally, we compare VizFake with deep\ntransfer learning, since it is a very popular black-box approach for image\nclassification and also well-known text text-based methods. VizFake achieves\ncompetitive accuracy with deep transfer learning models while being two orders\nof magnitude faster and not requiring laborious hyper-parameter tuning.",
+    "pdf_url": "http://arxiv.org/pdf/2102.07849v2",
+    "published": "2021-02-15"
+  }
+}

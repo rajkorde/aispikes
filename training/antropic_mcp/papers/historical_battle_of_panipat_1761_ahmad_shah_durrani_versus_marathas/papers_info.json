@@ -1,0 +1,56 @@
+{
+  "2202.06267v1": {
+    "title": "T-Controllability of Evolution Systems having Non-instantaneous Impulses",
+    "authors": [
+      "Vishant Shah",
+      "Kalpesh Bharvad",
+      "Dipsha Bhadrecha",
+      "Aashi Maratha",
+      "Jaita Sharma",
+      "Dhanesh Patel"
+    ],
+    "summary": "In this manuscript, we have considered the system governed by a\nnoninstantaneous impulsive dynamical system of integer order with classical and\nnonlocal conditions and derived sufficient conditions for the trajectory\ncontrollability of the system on the Banach space. The conditions were obtained\nthrough the concept of semigroup properties of operator and Gronwall's\ninequality. Finally, illustrations with classical and nonlocal conditions were\nalso added to validate the derived conditions.",
+    "pdf_url": "http://arxiv.org/pdf/2202.06267v1",
+    "published": "2022-02-13"
+  },
+  "2108.03842v2": {
+    "title": "Dynamical Systems Theory compared to Game Theory: The case of Salamis's battle",
+    "authors": [
+      "Konstantina Founta",
+      "Loukas Zachilas"
+    ],
+    "summary": "In this paper, we present an innovative non-linear discrete system trying to\nmodel the historic battle of Salamis between Greeks and Persians. September\n2020 marks the anniversary of the 2500 years that have passed since this famous\nnaval battle, which took place in late September 480 B.C. The suggested model\ndescribes very well the most effective strategic behavior between two\nparticipants during a battle (or a war). Moreover, we compare the results of\nthe Dynamical Systems analysis to Game Theory, considering this conflict as a\n\"war game\".",
+    "pdf_url": "http://arxiv.org/pdf/2108.03842v2",
+    "published": "2021-08-09"
+  },
+  "quant-ph/0110096v3": {
+    "title": "Dilemma and Quantum Battle of Sexes",
+    "authors": [
+      "Ahmad Nawaz",
+      "A. H. Toor"
+    ],
+    "summary": "We analysed quantum version of the game battle of sexes using a general\ninitial quantum state. For a particular choice of initial entangled quantum\nstate it is shown that the classical dilemma of the battle of sexes can be\nresolved and a unique solution of the game can be obtained.",
+    "pdf_url": "http://arxiv.org/pdf/quant-ph/0110096v3",
+    "published": "2001-10-16"
+  },
+  "2008.05186v3": {
+    "title": "A short proof of the non-biplanarity of $K_9$",
+    "authors": [
+      "Ahmad Biniaz"
+    ],
+    "summary": "Battle, Harary, and Kodama (1962) and independently Tutte (1963) proved that\nthe complete graph with nine vertices is not biplanar. Aiming towards\nsimplicity and brevity, in this note we provide a short proof of this claim.",
+    "pdf_url": "http://arxiv.org/pdf/2008.05186v3",
+    "published": "2020-08-12"
+  },
+  "2203.11035v1": {
+    "title": "Continuous Flow Model of a Historical Battle: A Fresh Look at Pickett's charge",
+    "authors": [
+      "Jonathan Poggie",
+      "Sorin A. Matei",
+      "Robert Kirchubel"
+    ],
+    "summary": "A continuous flow model of infantry behavior, based on conservation of\nindividuals and tracking of subunit identity, has been developed in sufficient\ndetail that it can now be applied to a realistic simulation of a historical\nbattle. Pickett's charge during the 1863 Battle of Gettysburg, Pennsylvania in\nthe U.S. Civil War was chosen as an initial application of the model. This\nscenario is a good test of the current mathematical model because many modern\nmilitary tactics were employed, in a context where the action took place on\nfoot or horseback, and the historical map and troop numbers are available.\nCompared to a discrete agent model, the flow model was found to better capture\nthe interaction of the forces with the terrain and each other. A brigade-level\nsimulation, faithful to the details of the historical events, was performed.\nThe main source of asymmetry in the numbers of casualties was found to be the\ninability of the Confederate forces to use effective ranged fire while they\nwere moving. Comparison of simulations with and without terrain effects showed\nthat they slow the pace of battle and favor the defenders, exposing the\nattackers to heavy ranged fire for an extended period. A statistical analysis\nof possible outcomes for an ensemble of 1000 randomized perturbations of the\nbaseline brigade-level scenario was carried out. Consistent with historical\nevents, it was found that only 6 percent of the scenarios resulted in an\noutcome that could be considered a Confederate victory.",
+    "pdf_url": "http://arxiv.org/pdf/2203.11035v1",
+    "published": "2022-03-21"
+  }
+}
