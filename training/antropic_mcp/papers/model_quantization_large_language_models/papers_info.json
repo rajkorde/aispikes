@@ -1,0 +1,67 @@
+{
+  "2410.07505v1": {
+    "title": "CrossQuant: A Post-Training Quantization Method with Smaller Quantization Kernel for Precise Large Language Model Compression",
+    "authors": [
+      "Wenyuan Liu",
+      "Xindian Ma",
+      "Peng Zhang",
+      "Yan Wang"
+    ],
+    "summary": "Post-Training Quantization (PTQ) is an effective technique for compressing\nLarge Language Models (LLMs). While many studies focus on quantizing both\nweights and activations, it is still a challenge to maintain the accuracy of\nLLM after activating quantization. To investigate the primary cause, we extend\nthe concept of kernel from linear algebra to quantization functions to define a\nnew term, \"quantization kernel\", which refers to the set of elements in\nactivations that are quantized to zero. Through quantitative analysis of the\nquantization kernel, we find that these elements are crucial for maintaining\nthe accuracy of quantized LLMs. With the decrease of quantization kernel, the\nprecision of quantized LLMs increases. If the quantization kernel proportion is\nkept below 19% for OPT models and below 1% for LLaMA models, the precision loss\nfrom quantizing activations to INT8 becomes negligible. Motivated by the goal\nof developing a quantization method with small quantization kernel, we propose\nCrossQuant: a simple yet effective method for quantizing activations.\nCrossQuant cross-quantizes elements using row and column-wise absolute maximum\nvectors, achieving a quantization kernel of approximately 16% for OPT models\nand less than 0.1% for LLaMA models. Experimental results on LLMs (LLaMA, OPT)\nranging from 6.7B to 70B parameters demonstrate that CrossQuant improves or\nmaintains perplexity and accuracy in language modeling, zero-shot, and few-shot\ntasks.",
+    "pdf_url": "http://arxiv.org/pdf/2410.07505v1",
+    "published": "2024-10-10"
+  },
+  "2502.19008v1": {
+    "title": "Binary Neural Networks for Large Language Model: A Survey",
+    "authors": [
+      "Liangdong Liu",
+      "Zhitong Zheng",
+      "Cong Wang",
+      "Tianhuang Su",
+      "Zhenyu Yang"
+    ],
+    "summary": "Large language models (LLMs) have wide applications in the field of natural\nlanguage processing(NLP), such as GPT-4 and Llama. However, with the\nexponential growth of model parameter sizes, LLMs bring significant resource\noverheads. Low-bit quantization, as a key technique, reduces memory usage and\ncomputational demands by decreasing the bit-width of model parameters,\nactivations, and gradients. Previous quantization methods for LLMs have largely\nemployed Post-Training Quantization (PTQ) and Quantization-Aware Training\n(QAT). PTQ does not require any retraining of the original model, while QAT\ninvolves optimizing precision during training to achieve the best quantization\nparameters. The BitNet team proposed a radically different approach, where\nquantization is performed from the start of model training, utilizing\nlow-precision binary weights during the training process. This approach has led\nto the emergence of many binary quantization techniques for large language\nmodels. This paper provides a comprehensive review of these binary quantization\ntechniques. Specifically, we will introduce binary quantization techniques in\ndeep neural networks and further explore their application to LLMs, reviewing\ntheir various contributions, implementations, and applications.",
+    "pdf_url": "http://arxiv.org/pdf/2502.19008v1",
+    "published": "2025-02-26"
+  },
+  "2505.14302v1": {
+    "title": "Scaling Law for Quantization-Aware Training",
+    "authors": [
+      "Mengzhao Chen",
+      "Chaoyi Zhang",
+      "Jing Liu",
+      "Yutao Zeng",
+      "Zeyue Xue",
+      "Zhiheng Liu",
+      "Yunshui Li",
+      "Jin Ma",
+      "Jie Huang",
+      "Xun Zhou",
+      "Ping Luo"
+    ],
+    "summary": "Large language models (LLMs) demand substantial computational and memory\nresources, creating deployment challenges. Quantization-aware training (QAT)\naddresses these challenges by reducing model precision while maintaining\nperformance. However, the scaling behavior of QAT, especially at 4-bit\nprecision (W4A4), is not well understood. Existing QAT scaling laws often\nignore key factors such as the number of training tokens and quantization\ngranularity, which limits their applicability. This paper proposes a unified\nscaling law for QAT that models quantization error as a function of model size,\ntraining data volume, and quantization group size. Through 268 QAT experiments,\nwe show that quantization error decreases as model size increases, but rises\nwith more training tokens and coarser quantization granularity. To identify the\nsources of W4A4 quantization error, we decompose it into weight and activation\ncomponents. Both components follow the overall trend of W4A4 quantization\nerror, but with different sensitivities. Specifically, weight quantization\nerror increases more rapidly with more training tokens. Further analysis shows\nthat the activation quantization error in the FC2 layer, caused by outliers, is\nthe primary bottleneck of W4A4 QAT quantization error. By applying\nmixed-precision quantization to address this bottleneck, we demonstrate that\nweight and activation quantization errors can converge to similar levels.\nAdditionally, with more training data, weight quantization error eventually\nexceeds activation quantization error, suggesting that reducing weight\nquantization error is also important in such scenarios. These findings offer\nkey insights for improving QAT research and development.",
+    "pdf_url": "http://arxiv.org/pdf/2505.14302v1",
+    "published": "2025-05-20"
+  },
+  "2504.13932v1": {
+    "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
+    "authors": [
+      "Deyu Cao",
+      "Samin Aref"
+    ],
+    "summary": "Large language models offer remarkable capabilities, but their size and\ncomputational demands pose practical challenges. Quantization methods compress\ntheir size through replacing their high-precision parameters by quantized\nvalues of lower precision. Post-training quantization reduces model size\nefficiently at the cost of decreased accuracy, while quantization-aware\ntraining better preserves accuracy but is resource-intensive. Among existing\npost-training quantization algorithms, the ApiQ method achieves superior\naccuracy preservation at minimal memory and time overhead. We investigate two\nideas to extend performance in ultra-low-bit quantization beyond ApiQ's level.\nFirst, we look into combining existing quantization-aware training techniques\nwith ApiQ's partial training. We show that this does not outperform the\nbaseline ApiQ method with limited training data and frozen weights. This leads\nto two key insights: (1) The substantial representational capacity that is\ngained through full retraining may not be feasible through partial training.\n(2) This gain seems to depend on using a large and diverse dataset in\nquantization-aware training. Second, through a novel approach informed by the\ntwo insights, we propose an ultra-low-bit quantization method that builds upon\nApiQ and extends its performance without the need for full retraining. It\nrelies on a saliency-aware regularization term that prioritizes preserving the\nmost impactful parameters during quantization. Our experiments on benchmark\nlanguage models from the LLaMA family show that our proposed approach boosts\naccuracy and tightens the gap between the quantized model and the\nfull-precision model, with minimal overhead. Our method will be made publicly\navailable to facilitate future developments in ultra-low-bit quantization of\nlarge language models.",
+    "pdf_url": "http://arxiv.org/pdf/2504.13932v1",
+    "published": "2025-04-14"
+  },
+  "2311.01305v3": {
+    "title": "AWEQ: Post-Training Quantization with Activation-Weight Equalization for Large Language Models",
+    "authors": [
+      "Baisong Li",
+      "Xingwang Wang",
+      "Haixiao Xu"
+    ],
+    "summary": "Large language models(LLMs) exhibit excellent performance across a variety of\ntasks, but they come with significant computational and storage costs.\nQuantizing these models is an effective way to alleviate this issue. However,\nexisting methods struggle to strike a balance between model accuracy and\nhardware efficiency. This is where we introduce AWEQ, a post-training method\nthat requires no additional training overhead. AWEQ excels in both\nultra-low-bit quantization and 8-bit weight and activation (W8A8) quantization.\nThere is an observation that weight quantization is less challenging than\nactivation quantization. AWEQ transfers the difficulty of activation\nquantization to weights using channel equalization, achieving a balance between\nthe quantization difficulties of both, and thereby maximizing performance. We\nhave further refined the equalization method to mitigate quantization bias\nerror, ensuring the robustness of the model. Extensive experiments on popular\nmodels such as LLaMA and OPT demonstrate that AWEQ outperforms all existing\npost-training quantization methods for large models.",
+    "pdf_url": "http://arxiv.org/pdf/2311.01305v3",
+    "published": "2023-11-02"
+  }
+}
