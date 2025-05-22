@@ -1,0 +1,60 @@
+{
+  "2502.01652v1": {
+    "title": "Hybrid Group Relative Policy Optimization: A Multi-Sample Approach to Enhancing Policy Optimization",
+    "authors": [
+      "Soham Sane"
+    ],
+    "summary": "Hybrid Group Relative Policy Optimization (Hybrid GRPO) is a reinforcement\nlearning framework that extends Proximal Policy Optimization (PPO) and Group\nRelative Policy Optimization (GRPO) by incorporating empirical multi-sample\naction evaluation while preserving the stability of value function-based\nlearning. Unlike DeepSeek GRPO, which eliminates the value function in favor of\npurely empirical reward estimation, Hybrid GRPO introduces a structured\nadvantage computation method that balances empirical action sampling with\nbootstrapped value estimation. This approach enhances sample efficiency,\nimproves learning stability, and mitigates variance amplification observed in\npurely empirical methods. A detailed mathematical comparison between PPO,\nDeepSeek GRPO, and Hybrid GRPO is presented, highlighting key differences in\nadvantage estimation and policy updates. Experimental validation in a\ncontrolled reinforcement learning environment demonstrates that Hybrid GRPO\nachieves superior convergence speed, more stable policy updates, and improved\nsample efficiency compared to existing methods. Several extensions to Hybrid\nGRPO are explored, including entropy-regularized sampling, hierarchical\nmulti-step sub-sampling, adaptive reward normalization, and value-based action\nselection. Beyond reinforcement learning in simulated environments, Hybrid GRPO\nprovides a scalable framework for bridging the gap between large language\nmodels (LLMs) and real-world agent-based decision-making. By integrating\nstructured empirical sampling with reinforcement learning stability mechanisms,\nHybrid GRPO has potential applications in autonomous robotics, financial\nmodeling, and AI-driven control systems. These findings suggest that Hybrid\nGRPO serves as a robust and adaptable reinforcement learning methodology,\npaving the way for further advancements in policy optimization.",
+    "pdf_url": "http://arxiv.org/pdf/2502.01652v1",
+    "published": "2025-01-30"
+  },
+  "2503.23905v1": {
+    "title": "Boosting MLLM Reasoning with Text-Debiased Hint-GRPO",
+    "authors": [
+      "Qihan Huang",
+      "Long Chan",
+      "Jinlong Liu",
+      "Wanggui He",
+      "Hao Jiang",
+      "Mingli Song",
+      "Jingyuan Chen",
+      "Chang Yao",
+      "Jie Song"
+    ],
+    "summary": "MLLM reasoning has drawn widespread research for its excellent\nproblem-solving capability. Current reasoning methods fall into two types: PRM,\nwhich supervises the intermediate reasoning steps, and ORM, which supervises\nthe final results. Recently, DeepSeek-R1 has challenged the traditional view\nthat PRM outperforms ORM, which demonstrates strong generalization performance\nusing an ORM method (i.e., GRPO). However, current MLLM's GRPO algorithms still\nstruggle to handle challenging and complex multimodal reasoning tasks (e.g.,\nmathematical reasoning). In this work, we reveal two problems that impede the\nperformance of GRPO on the MLLM: Low data utilization and Text-bias. Low data\nutilization refers to that GRPO cannot acquire positive rewards to update the\nMLLM on difficult samples, and text-bias is a phenomenon that the MLLM bypasses\nimage condition and solely relies on text condition for generation after GRPO\ntraining. To tackle these problems, this work proposes Hint-GRPO that improves\ndata utilization by adaptively providing hints for samples of varying\ndifficulty, and text-bias calibration that mitigates text-bias by calibrating\nthe token prediction logits with image condition in test-time. Experiment\nresults on three base MLLMs across eleven datasets demonstrate that our\nproposed methods advance the reasoning capability of original MLLM by a large\nmargin, exhibiting superior performance to existing MLLM reasoning methods. Our\ncode is available at https://github.com/hqhQAQ/Hint-GRPO.",
+    "pdf_url": "http://arxiv.org/pdf/2503.23905v1",
+    "published": "2025-03-31"
+  },
+  "2505.12366v1": {
+    "title": "DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization",
+    "authors": [
+      "Gang Li",
+      "Ming Lin",
+      "Tomer Galanti",
+      "Zhengzhong Tu",
+      "Tianbao Yang"
+    ],
+    "summary": "The recent success and openness of DeepSeek-R1 have brought widespread\nattention to Group Relative Policy Optimization (GRPO) as a reinforcement\nlearning method for large reasoning models (LRMs). In this work, we analyze the\nGRPO objective under a binary reward setting and reveal an inherent limitation\nof question-level difficulty bias. We also identify a connection between GRPO\nand traditional discriminative methods in supervised learning. Motivated by\nthese insights, we introduce a new Discriminative Constrained Optimization\n(DisCO) framework for reinforcing LRMs, grounded in the principle of\ndiscriminative learning. The main differences between DisCO and GRPO and its\nrecent variants are: (1) it replaces the group relative objective with a\ndiscriminative objective defined by a scoring function; (2) it abandons\nclipping-based surrogates in favor of non-clipping RL surrogate objectives used\nas scoring functions; (3) it employs a simple yet effective constrained\noptimization approach to enforce the KL divergence constraint, ensuring stable\ntraining. As a result, DisCO offers notable advantages over GRPO and its\nvariants: (i) it completely eliminates difficulty bias by adopting\ndiscriminative objectives; (ii) it addresses the entropy instability in GRPO\nand its variants through the use of non-clipping scoring functions and a\nconstrained optimization approach; (iii) it allows the incorporation of\nadvanced discriminative learning techniques to address data imbalance, where a\nsignificant number of questions have more negative than positive generated\nanswers during training. Our experiments on enhancing the mathematical\nreasoning capabilities of SFT-finetuned models show that DisCO significantly\noutperforms GRPO and its improved variants such as DAPO, achieving average\ngains of 7\\% over GRPO and 6\\% over DAPO across six benchmark tasks for an 1.5B\nmodel.",
+    "pdf_url": "http://arxiv.org/pdf/2505.12366v1",
+    "published": "2025-05-18"
+  },
+  "2503.06639v2": {
+    "title": "Reinforcement Learning with Verifiable Rewards: GRPO's Effective Loss, Dynamics, and Success Amplification",
+    "authors": [
+      "Youssef Mroueh"
+    ],
+    "summary": "Group Relative Policy Optimization (GRPO) was introduced and used\nsuccessfully to train DeepSeek R1 models for promoting reasoning capabilities\nof LLMs using verifiable or binary rewards. We show in this paper that GRPO\nwith verifiable rewards can be written as a Kullback Leibler ($\\mathsf{KL}$)\nregularized contrastive loss, where the contrastive samples are synthetic data\nsampled from the old policy. The optimal GRPO policy $\\pi_{n}$ can be expressed\nexplicitly in terms of the binary reward, as well as the first and second order\nstatistics of the old policy ($\\pi_{n-1}$) and the reference policy $\\pi_0$.\nIterating this scheme, we obtain a sequence of policies $\\pi_{n}$ for which we\ncan quantify the probability of success $p_n$. We show that the probability of\nsuccess of the policy satisfies a recurrence that converges to a fixed point of\na function that depends on the initial probability of success $p_0$ and the\nregularization parameter $\\beta$ of the $\\mathsf{KL}$ regularizer. We show that\nthe fixed point $p^*$ is guaranteed to be larger than $p_0$, thereby\ndemonstrating that GRPO effectively amplifies the probability of success of the\npolicy.",
+    "pdf_url": "http://arxiv.org/pdf/2503.06639v2",
+    "published": "2025-03-09"
+  },
+  "2504.09696v1": {
+    "title": "GRPO-LEAD: A Difficulty-Aware Reinforcement Learning Approach for Concise Mathematical Reasoning in Language Models",
+    "authors": [
+      "Jixiao Zhang",
+      "Chunsheng Zuo"
+    ],
+    "summary": "Recent advances in R1-like reasoning models leveraging Group Relative Policy\nOptimization (GRPO) have significantly improved the performance of language\nmodels on mathematical reasoning tasks. However, current GRPO implementations\nencounter critical challenges, including reward sparsity due to binary accuracy\nmetrics, limited incentives for conciseness, and insufficient focus on complex\nreasoning tasks. To address these issues, we propose GRPO-LEAD, a suite of\nnovel enhancements tailored for mathematical reasoning. Specifically, GRPO-LEAD\nintroduces (1) a length-dependent accuracy reward to encourage concise and\nprecise solutions, (2) an explicit penalty mechanism for incorrect answers to\nsharpen decision boundaries, and (3) a difficulty-aware advantage reweighting\nstrategy that amplifies learning signals for challenging problems. Furthermore,\nwe systematically examine the impact of model scale and supervised fine-tuning\n(SFT) strategies, demonstrating that larger-scale base models and carefully\ncurated datasets significantly enhance reinforcement learning effectiveness.\nExtensive empirical evaluations and ablation studies confirm that GRPO-LEAD\nsubstantially mitigates previous shortcomings, resulting in language models\nthat produce more concise, accurate, and robust reasoning across diverse\nmathematical tasks.",
+    "pdf_url": "http://arxiv.org/pdf/2504.09696v1",
+    "published": "2025-04-13"
+  }
+}

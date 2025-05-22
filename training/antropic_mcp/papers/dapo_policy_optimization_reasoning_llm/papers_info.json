@@ -1,0 +1,87 @@
+{
+  "2412.18279v1": {
+    "title": "Improving Multi-Step Reasoning Abilities of Large Language Models with Direct Advantage Policy Optimization",
+    "authors": [
+      "Jiacai Liu",
+      "Chaojie Wang",
+      "Chris Yuhao Liu",
+      "Liang Zeng",
+      "Rui Yan",
+      "Yiwen Sun",
+      "Yang Liu",
+      "Yahui Zhou"
+    ],
+    "summary": "The role of reinforcement learning (RL) in enhancing the reasoning of large\nlanguage models (LLMs) is becoming increasingly significant. Despite the\nsuccess of RL in many scenarios, there are still many challenges in improving\nthe reasoning of LLMs. One challenge is the sparse reward, which makes\noptimization difficult for RL and necessitates a large amount of data samples.\nAnother challenge stems from the inherent instability of RL, particularly when\nusing Actor-Critic (AC) methods to derive optimal policies, which often leads\nto unstable training processes. To address these issues, we introduce Direct\nAdvantage Policy Optimization (DAPO), an novel step-level offline RL algorithm.\nUnlike standard alignment that rely solely outcome rewards to optimize policies\n(such as DPO), DAPO employs a critic function to predict the reasoning accuracy\nat each step, thereby generating dense signals to refine the generation\nstrategy. Additionally, the Actor and Critic components in DAPO are trained\nindependently, avoiding the co-training instability observed in standard AC\nalgorithms like PPO. We train DAPO on mathematical and code query datasets and\nthen evaluate its performance on multiple benchmarks. Our results show that\nDAPO can effectively enhance the mathematical and code capabilities on both SFT\nmodels and RL models, demonstrating the effectiveness of DAPO.",
+    "pdf_url": "http://arxiv.org/pdf/2412.18279v1",
+    "published": "2024-12-24"
+  },
+  "2505.06408v1": {
+    "title": "A New DAPO Algorithm for Stock Trading",
+    "authors": [
+      "Ruijian Zha",
+      "Bojun Liu"
+    ],
+    "summary": "Recent advances in reinforcement learning, such as Dynamic Sampling Policy\nOptimization (DAPO), show strong performance when paired with large language\nmodels (LLMs). Motivated by this success, we ask whether similar gains can be\nrealized in financial trading. We design a trading agent that combines an\nimproved Group Relative Policy Optimization (GRPO) algorithm, augmented with\nideas from DAPO, with LLM-based risk and sentiment signals extracted from\nfinancial news. On the NASDAQ-100 index (FNSPID dataset), our agent attains a\ncumulative return of 230.49 percent and an information ratio of 0.37,\noutperforming the CPPO-DeepSeek baseline. It also cuts training time from about\n8 hours to 2.5 hours over 100 epochs while markedly reducing RAM usage. The\nproposed RL-LLM framework offers a scalable path toward data-efficient trading\nagents. Code: https://github.com/Ruijian-Zha/FinRL-DAPO-SR/",
+    "pdf_url": "http://arxiv.org/pdf/2505.06408v1",
+    "published": "2025-05-09"
+  },
+  "2410.01249v1": {
+    "title": "Dual Approximation Policy Optimization",
+    "authors": [
+      "Zhihan Xiong",
+      "Maryam Fazel",
+      "Lin Xiao"
+    ],
+    "summary": "We propose Dual Approximation Policy Optimization (DAPO), a framework that\nincorporates general function approximation into policy mirror descent methods.\nIn contrast to the popular approach of using the $L_2$-norm to measure function\napproximation errors, DAPO uses the dual Bregman divergence induced by the\nmirror map for policy projection. This duality framework has both theoretical\nand practical implications: not only does it achieve fast linear convergence\nwith general function approximation, but it also includes several well-known\npractical methods as special cases, immediately providing strong convergence\nguarantees.",
+    "pdf_url": "http://arxiv.org/pdf/2410.01249v1",
+    "published": "2024-10-02"
+  },
+  "2505.12366v1": {
+    "title": "DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization",
+    "authors": [
+      "Gang Li",
+      "Ming Lin",
+      "Tomer Galanti",
+      "Zhengzhong Tu",
+      "Tianbao Yang"
+    ],
+    "summary": "The recent success and openness of DeepSeek-R1 have brought widespread\nattention to Group Relative Policy Optimization (GRPO) as a reinforcement\nlearning method for large reasoning models (LRMs). In this work, we analyze the\nGRPO objective under a binary reward setting and reveal an inherent limitation\nof question-level difficulty bias. We also identify a connection between GRPO\nand traditional discriminative methods in supervised learning. Motivated by\nthese insights, we introduce a new Discriminative Constrained Optimization\n(DisCO) framework for reinforcing LRMs, grounded in the principle of\ndiscriminative learning. The main differences between DisCO and GRPO and its\nrecent variants are: (1) it replaces the group relative objective with a\ndiscriminative objective defined by a scoring function; (2) it abandons\nclipping-based surrogates in favor of non-clipping RL surrogate objectives used\nas scoring functions; (3) it employs a simple yet effective constrained\noptimization approach to enforce the KL divergence constraint, ensuring stable\ntraining. As a result, DisCO offers notable advantages over GRPO and its\nvariants: (i) it completely eliminates difficulty bias by adopting\ndiscriminative objectives; (ii) it addresses the entropy instability in GRPO\nand its variants through the use of non-clipping scoring functions and a\nconstrained optimization approach; (iii) it allows the incorporation of\nadvanced discriminative learning techniques to address data imbalance, where a\nsignificant number of questions have more negative than positive generated\nanswers during training. Our experiments on enhancing the mathematical\nreasoning capabilities of SFT-finetuned models show that DisCO significantly\noutperforms GRPO and its improved variants such as DAPO, achieving average\ngains of 7\\% over GRPO and 6\\% over DAPO across six benchmark tasks for an 1.5B\nmodel.",
+    "pdf_url": "http://arxiv.org/pdf/2505.12366v1",
+    "published": "2025-05-18"
+  },
+  "2504.05118v3": {
+    "title": "VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks",
+    "authors": [
+      "Yu Yue",
+      "Yufeng Yuan",
+      "Qiying Yu",
+      "Xiaochen Zuo",
+      "Ruofei Zhu",
+      "Wenyuan Xu",
+      "Jiaze Chen",
+      "Chengyi Wang",
+      "TianTian Fan",
+      "Zhengyin Du",
+      "Xiangpeng Wei",
+      "Xiangyu Yu",
+      "Gaohong Liu",
+      "Juncai Liu",
+      "Lingjun Liu",
+      "Haibin Lin",
+      "Zhiqi Lin",
+      "Bole Ma",
+      "Chi Zhang",
+      "Mofan Zhang",
+      "Wang Zhang",
+      "Hang Zhu",
+      "Ru Zhang",
+      "Xin Liu",
+      "Mingxuan Wang",
+      "Yonghui Wu",
+      "Lin Yan"
+    ],
+    "summary": "We present VAPO, Value-based Augmented Proximal Policy Optimization framework\nfor reasoning models., a novel framework tailored for reasoning models within\nthe value-based paradigm. Benchmarked the AIME 2024 dataset, VAPO, built on the\nQwen 32B pre-trained model, attains a state-of-the-art score of\n$\\mathbf{60.4}$. In direct comparison under identical experimental settings,\nVAPO outperforms the previously reported results of DeepSeek-R1-Zero-Qwen-32B\nand DAPO by more than 10 points. The training process of VAPO stands out for\nits stability and efficiency. It reaches state-of-the-art performance within a\nmere 5,000 steps. Moreover, across multiple independent runs, no training\ncrashes occur, underscoring its reliability. This research delves into long\nchain-of-thought (long-CoT) reasoning using a value-based reinforcement\nlearning framework. We pinpoint three key challenges that plague value-based\nmethods: value model bias, the presence of heterogeneous sequence lengths, and\nthe sparsity of reward signals. Through systematic design, VAPO offers an\nintegrated solution that effectively alleviates these challenges, enabling\nenhanced performance in long-CoT reasoning tasks.",
+    "pdf_url": "http://arxiv.org/pdf/2504.05118v3",
+    "published": "2025-04-07"
+  }
+}
