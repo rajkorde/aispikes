@@ -11,7 +11,7 @@ nest_asyncio.apply()
 
 # Hello World
 agent = Agent(name="Assistant", instructions="You are a helpful assistant.")
-results = Runner.run_sync(agent, "Write a haiku about python programming")
+results = Runner.run_sync(agent, "Write a haiku about Obama")
 print(results.final_output)
 
 # Tutors
