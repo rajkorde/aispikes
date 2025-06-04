@@ -5,6 +5,7 @@ import asyncio
 import random
 import uuid
 
+import nest_asyncio
 from agents import (
     Agent,
     HandoffOutputItem,
@@ -20,8 +21,11 @@ from agents import (
     trace,
 )
 from agents.extensions.handoff_prompt import RECOMMENDED_PROMPT_PREFIX
-from mcp import ToolsCapability
+from dotenv import load_dotenv
 from pydantic import BaseModel
+
+assert load_dotenv()
+nest_asyncio.apply()
 
 
 ## Context
@@ -140,7 +144,9 @@ async def main():
     conversation_id = uuid.uuid4().hex[:16]
 
     while True:
-        user_input = input("Enter your message")
+        user_input = input("\nEnter your message: ")
+        if user_input.lower() == "quit":
+            break
 
         with trace("Customer service", group_id=conversation_id):
             input_items.append({"content": user_input, "role": "user"})
