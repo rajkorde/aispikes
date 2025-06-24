@@ -3,7 +3,6 @@ import uuid
 import typer
 from dotenv import load_dotenv
 from rich.prompt import IntPrompt, Prompt
-
 from src.feature_flags import FeatureFlags
 from src.story import Story, StoryCondition, Student
 from src.utils import deserialize, serialize
